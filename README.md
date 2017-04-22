@@ -8,6 +8,8 @@ Initially we intended to use each motor for another character in the alphabet. T
 * 1x ATMEGA16-16PU
 * 4x ULN2803L
 * 1x HC-06 Bluetooth Serial adapter
+* 1x 5V low-dropout
+* 1x 3.3V low-dropout
 * Smaller parts are not listed here
 
 
