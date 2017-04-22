@@ -32,3 +32,7 @@ The program for the ATMEGA stores the key combinations in the EEPROM and provide
 ## 16 Mhz Fuses
 
     avrdude -C /etc/avrdude.conf -p m16 -c stk500v2 -P /dev/ttyACM3 -e -vv -U lfuse:w:0xFF:m -U hfuse:w:0x99:m 
+
+
+## Training software
+For training we used a modified version of the miniterm.py from https://github.com/pyserial/pyserial. Thanks to all contributors of that project.
