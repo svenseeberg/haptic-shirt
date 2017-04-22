@@ -13,7 +13,7 @@ Initially we intended to use each motor for another character in the alphabet. B
 
 # Participants
 * Felix Heilmeyer https://github.com/heilerich
-* Armin Feistenauer
+* Armin Feistenauer https://github.com/afeistenauer
 * Sven Seeberg https://github.com/sven15
 
 # Software
