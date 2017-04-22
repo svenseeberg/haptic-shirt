@@ -15,3 +15,20 @@ Initially we intended to use each motor for another character in the alphabet. B
 * Felix Heilmeyer https://github.com/heilerich
 * Armin Feistenauer
 * Sven Seeberg https://github.com/sven15
+
+# Software
+The program for the ATMEGA stores the key combinations in the EEPROM and provides a simple terminal functionality. The following commands were used to flash the ATMEGA.
+
+## Compiling
+
+    avr-gcc -mmcu=atmega16 -Os main.c -o main.o
+    avr-objcopy -j .text -j .data -O ihex  main.o  main.hex
+    avrdude -C /etc/avrdude.conf -p m16 -c stk500v2 -P /dev/ttyACM3 -e -vv -U flash:w:main.hex
+
+## Std Fuses
+
+    avrdude -C /etc/avrdude.conf -p m16 -c stk500v2 -P /dev/ttyACM3 -e -vv -U lfuse:w:0xE1:m -U hfuse:w:0x99:m 
+
+## 16 Mhz Fuses
+
+    avrdude -C /etc/avrdude.conf -p m16 -c stk500v2 -P /dev/ttyACM3 -e -vv -U lfuse:w:0xFF:m -U hfuse:w:0x99:m 
